@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+<title>Xanbit</title>
+<link href="css/angular-bootstrap.css" rel="stylesheet">
+<link href="css/common-typewriter.css" rel="stylesheet">
+<script src="js/angular-bootstrap.js" type="text/javascript"></script>
+<script src="js/app.js"></script>
+<script src="js/main.ctrl.js"></script>
+<script src="js/home.ctrl.js"></script>
+<script src="js/directive.typewriter.js"></script>
+<style type="text/css">
+[ng\:cloak], [ng-cloak], .ng-cloak {
+	display: none !important;
+}
+</style>
+</head>
+
+<body ng-app="xanbitApp">
+	<div class="container" ng-controller="home">
+		<div>Launching On : {{info.launchdate}}</div>
+		<div>
+			<h1 typewrite type-delay="100" blink-cursor="false"
+				text="Xanbit Technologies "></h1>
+			<p typewrite type-delay="100" blink-cursor="false"
+				text="serving your IT needs" initial-delay="3s"></p>
+			<p typewrite blink-cursor="false" text="Coming Soon....."
+				initial-delay="7s" type-delay="50"></p>
+		</div>
+	</div>
+</body>
+</html>
