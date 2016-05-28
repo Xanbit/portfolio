@@ -3,11 +3,24 @@
   position: absolute;
   top: 0; left: 0; bottom: 0; right: 0;
 }
-
 .Absolute-Center.is-Responsive {
   width: 50%; 
   height: 50%;
   min-width: 200px;
   max-width: 500px;
   padding: 40px;
+}
+
+.impressiveText {
+	font-style: italic;
+	font-family: "Courier New", Courier, monospace;
+	color: #b3f6f6;
+}
+.heavyText {
+	font-size: 60px;
+	font-weight: bold;
+	font-variant: inherit;
+	font-style: italic;
+	font-family: monospace;
+	color: green;
 }
