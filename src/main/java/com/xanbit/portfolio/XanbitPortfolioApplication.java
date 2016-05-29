@@ -38,6 +38,13 @@ class HomeController {
       return model;
     }
     
+    @RequestMapping("/info/about")
+    public Map<String,Object> about() {
+      Map<String,Object> model = new HashMap<String,Object>();
+      model.put("xanbit", "xanbit provides IT services");
+      return model;
+    }
+    
     private Date getLaunchDate(){
 
         SimpleDateFormat isoFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
