@@ -1,17 +1,20 @@
 <!doctype html>
-<html class="full">
+<html lang="{{ lang }}" ng-app="xanbitApp" class="full">
 <head>
 <title>Xanbit</title>
 <link href="css/angular-bootstrap.css" rel="stylesheet">
 <link href="css/common-typewriter.css" rel="stylesheet">
 <link href="css/big-picture.css" rel="stylesheet">
 <link href="css/common.css" rel="stylesheet">
+<link href="thirdparty/css/languages.min.css" rel="stylesheet">
 
 <script src="js/angular-bootstrap.js" type="text/javascript"></script>
 <script src="js/app.js"></script>
 <script src="js/main.ctrl.js"></script>
 <script src="js/home.ctrl.js"></script>
 <script src="js/directive.typewriter.js"></script>
+<script src="js/translation.js"></script>
+<script src="js/lang-switch.ctrl.js"></script>
 <style type="text/css">
 [ng\:cloak], [ng-cloak], .ng-cloak {
 	display: none !important;
@@ -20,6 +23,21 @@
 </head>
 
 <body ng-app="xanbitApp">
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        <img alt="Xanbit" src="images/temp-logo.png">
+      </a> 
+    </div>
+    
+      <div ng-controller="LanguageSwitchController" class="pull-right" style="text-align:right">
+      <a ng-show="lang == 'sv'" ng-click="changeLanguage('en')" ><span class="lang-sm" lang="en"></span></a> 
+      <a ng-show="lang == 'en'" ng-click="changeLanguage('sv')" ><span class="lang-sm" lang="sv"></span></a>
+      </div>
+  </div>
+</nav>
+	<div align="center"><h2 class="impressiveText">{{ 'WELCOME_MESSAGE' | translate }}</h2></div>
 	<div class="container" ng-controller="home">
 		<div class="Absolute-Center is-Responsive">
 			<div align="center">
