@@ -51,7 +51,7 @@ class HomeController {
         isoFormat.setTimeZone(TimeZone.getTimeZone("CET"));
         
         try {
-			Date date = isoFormat.parse("2016-06-06T09:00:00");
+			Date date = isoFormat.parse("2016-06-22T09:00:00");
 			return date;
 		} catch (ParseException e) {
 			e.printStackTrace();
